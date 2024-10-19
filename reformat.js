@@ -11,7 +11,7 @@ async function main() {
         let lines = contents.split('\n')
         lines = lines.map( line => {
             return line.replaceAll(/[。！？，]/g, ' ') .trim()
-            .replace(' ', '.')
+            .replaceAll(' ', '.')
         })
         p.contents = lines.join('|')
     })
